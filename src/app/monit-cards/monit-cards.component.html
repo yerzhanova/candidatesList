@@ -5,8 +5,10 @@
     <a class='activePage' [ngClass]="{disabled: pager.currentPage === 1}" (click)="setPage(1)">{{pager.currentPage}}</a>
     <a [ngClass]="{disabled: pager.currentPage === pager.totalPages}" (click)="setPage(pager.currentPage + 1)"> > </a>
   </div>
-  <div><button class='addButton' *ngIf="!addEnable" (click)="addCard()">Добавить соискателя</button>
-  <button class='editButton' (click)="goToMain()">На главную</button></div>
+  <div>
+    <button class='addButton' *ngIf="!addEnable" (click)="addCard()">Добавить соискателя</button>
+    <button class='editButton' (click)="goToMain()">На главную</button>
+  </div>
   <div class="list">
     <div class="card" *ngFor="let read of reads">
       <div class="container">

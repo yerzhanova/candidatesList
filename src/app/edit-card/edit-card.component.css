@@ -33,19 +33,19 @@ input {
 
 .column {
   width: 60%;
-  /*margin-bottom: 20px;*/
-  /*!*display: inline-block;*!*/
 }
+
 .columnImg {
   width: 30%;
   display: inline-block;
-  /*margin-top:50px*/
 }
+
 .columnImg > img {
   width: 60%;
   float: left;
   margin: 8px;
 }
+
 .editForm {
   border-radius: 5px;
   background-color: #f2f2f2;

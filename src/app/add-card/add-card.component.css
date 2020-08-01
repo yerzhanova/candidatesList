@@ -57,13 +57,6 @@ label {
   float: left;
 }
 
-.disableButton {
-  pointer-events: none;
-  background-color: #a7a7a7;
-  color: white;
-  border: none;
-}
-
 .errorMessage {
   color: #bb0000;
   font-weight: bold;
