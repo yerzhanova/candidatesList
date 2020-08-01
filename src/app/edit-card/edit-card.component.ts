@@ -22,6 +22,8 @@ export class EditCardComponent implements OnInit {
     phoneNumber: '',
     picture: ''
   };
+  saveEnable = true;
+  message = '*Пожалуйста, заполните пустые поля';
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       this.id = Number(params.id) ;
@@ -29,8 +31,12 @@ export class EditCardComponent implements OnInit {
     });
   }
   saveCandidate(): void {
-    this.candidateService.updateCandidate(this.read).subscribe(res => console.log(res));
-    this.location.back();
+    if (this.read.firstName === '' || this.read.lastName === '' || this.read.phoneNumber === '') {
+      this.saveEnable = false;
+    } else {
+      this.candidateService.updateCandidate(this.read).subscribe(res => console.log(res));
+      this.location.back();
+    }
   }
   cancel(): void {
     this.location.back();

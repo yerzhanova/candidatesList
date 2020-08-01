@@ -1,8 +1,11 @@
-<div>
+<div class="editForm">
   <p>
     Редактирование профиля
   </p>
-  <div class="editCard">
+  <div class="columnImg">
+    <img src="{{read.picture}}" alt="avatar"/>
+  </div>
+  <div class="column">
     <form>
       <label>First Name</label>
       <input name="first" [(ngModel)]="read.firstName">
@@ -20,8 +23,9 @@
       <input name="picture" [(ngModel)]="read.picture">
     </form>
   </div>
+  <div class="errorMessage"><label *ngIf="!saveEnable" >{{message}}</label></div>
   <div>
-    <button (click)="saveCandidate()">Сохранить</button>
-    <button (click)="cancel()">Отмена</button>
+    <button [ngClass]="{saveButton: read.firstName&&read.lastName&&read.phoneNumber}" (click)="saveCandidate()">Сохранить</button>
+    <button class="cancelButton" (click)="cancel()">Отмена</button>
   </div>
 </div>

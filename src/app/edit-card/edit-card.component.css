@@ -5,6 +5,10 @@ button {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+p {
+  margin: 12px 10px;
+  font-weight: bold;
+}
 .saveButton {
   background-color: #4CAF50;
   color: white;
@@ -16,11 +20,47 @@ button {
 }
 
 form {
-  width: 240px;
+  margin: 8px 0;
+  padding: 12px 20px;
 }
 
 input {
   padding: 12px 20px;
-  margin: 8px 0;
   box-sizing: border-box;
+  float: right;
+  width: 60%;
+}
+
+.column {
+  width: 60%;
+  /*margin-bottom: 20px;*/
+  /*!*display: inline-block;*!*/
+}
+.columnImg {
+  width: 30%;
+  display: inline-block;
+  /*margin-top:50px*/
+}
+.columnImg > img {
+  width: 60%;
+  float: left;
+  margin: 8px;
+}
+.editForm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 60%;
+  margin: 12px;
+  display: inline-block;
+}
+
+.column {
+  display: inline-block;
+}
+
+.errorMessage {
+  color: #bb0000;
+  font-weight: bold;
+  padding: 12px 0;
 }
