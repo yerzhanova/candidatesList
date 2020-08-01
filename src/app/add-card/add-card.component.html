@@ -15,8 +15,9 @@
     <div class="col-30"><label>Photo</label></div>
     <div class="col-70"><input name="picture" [(ngModel)]="newCandidate.picture"></div>
   </div>
+  <div class="errorMessage"><label *ngIf="!saveEnable" >{{message}}</label></div>
   <div class="input-group">
-    <button class='editButton' (click)="saveCard()">Сохранить</button>
+    <button [ngClass]="{editButton: newCandidate.firstName&&newCandidate.lastName&&newCandidate.phoneNumber}" (click)="saveCard()">Сохранить</button>
     <button class='addButton' (click)="cancelAdding()">Отмена</button>
   </div>
 </div>

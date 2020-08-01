@@ -24,6 +24,8 @@ export class AddCardComponent implements OnInit {
     phoneNumber: '',
     picture: ''
   };
+  message =  '*Заполните все поля';
+  saveEnable = true;
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       this.newCandidate.id = Number(params.id);
@@ -31,13 +33,17 @@ export class AddCardComponent implements OnInit {
   }
   saveCard(): void {
     console.log(this.newCandidate);
-    if (this.newCandidate.picture === '') {
-      this.newCandidate.picture = 'https://c7.hotpng.com/preview/312/283/679/avatar-computer-icons-user-profile-business-user-avatar-thumbnail.jpg';
+    if (this.newCandidate.firstName === '' || this.newCandidate.lastName === '' || this.newCandidate.phoneNumber === '') {
+      this.saveEnable = false;
+    } else {
+      if (this.newCandidate.picture === '') {
+        this.newCandidate.picture = 'https://c7.hotpng.com/preview/312/283/679/avatar-computer-icons-user-profile-business-user-avatar-thumbnail.jpg';
+      }
+      this.candidateService.createCandidate(this.newCandidate as Candidate).subscribe(candidate => {
+        console.log(candidate, 'new user');
+      });
+      this.location.back();
     }
-    this.candidateService.createCandidate(this.newCandidate as Candidate).subscribe(candidate => {
-      console.log(candidate, 'new user');
-    });
-    this.location.back();
   }
   cancelAdding(): void {
     this.location.back();
