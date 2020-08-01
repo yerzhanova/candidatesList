@@ -1,0 +1,58 @@
+button {
+  border: none;
+  padding: 10px 14px;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.addButton {
+  background-color: black;
+  color: white;
+  margin: 10px;
+}
+
+.editButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.deleteButton{
+  background-color: crimson;
+  color: white;
+}
+
+.addForm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  margin: 12px;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  float: right;
+  width: 100%;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.input-group {
+  display: table;
+  width: 100%;
+}
+
+.col-30 {
+  width: 30%;
+  float: left;
+}
+
+.col-70 {
+  width: 70%;
+  float: left;
+}

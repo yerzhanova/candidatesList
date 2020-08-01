@@ -1,0 +1,24 @@
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+}
+input {
+  height: 26px;
+}
+
+.errorMessage {
+  color: #bb0000;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.main {
+  margin: auto;
+  width: 50%;
+}
+
+div {
+  display: inline-block;
+}

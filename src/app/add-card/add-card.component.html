@@ -1,0 +1,22 @@
+<div class="addForm">
+  <div class="input-group">
+    <div class="col-30"><label>First Name</label></div>
+    <div class="col-70"><input name="first" [(ngModel)]="newCandidate.firstName"></div>
+  </div>
+  <div class="input-group">
+    <div class="col-30"><label>Last Name</label></div>
+    <div class="col-70"><input name="last" [(ngModel)]="newCandidate.lastName"></div>
+  </div>
+  <div class="input-group">
+    <div class="col-30"><label>Phone Number</label></div>
+    <div class="col-70"><input name="phone" [(ngModel)]="newCandidate.phoneNumber"></div>
+  </div>
+  <div class="input-group">
+    <div class="col-30"><label>Photo</label></div>
+    <div class="col-70"><input name="picture" [(ngModel)]="newCandidate.picture"></div>
+  </div>
+  <div class="input-group">
+    <button class='editButton' (click)="saveCard()">Сохранить</button>
+    <button class='addButton' (click)="cancelAdding()">Отмена</button>
+  </div>
+</div>

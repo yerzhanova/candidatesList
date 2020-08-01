@@ -1,0 +1,12 @@
+<div class="main">
+  <div>Количество сотрудников</div>
+  <div>Количество записей на странице</div>
+  <div>
+    <input [(ngModel)]="cardsOnPage"/>
+    <button (click)="generatePages()">сформировать</button>
+  </div>
+  <div class="errorMessage" *ngIf="enableMessage">
+   <label>Пожалуйста, введите числовое значение</label>
+
+  </div>
+</div>
