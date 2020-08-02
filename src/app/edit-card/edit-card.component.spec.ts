@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { CandidateService} from '../candidate.service';
+import { MockHeroService } from '../candidate.service.mock';
 import { EditCardComponent } from './edit-card.component';
 
 describe('EditCardComponent', () => {
@@ -8,7 +11,12 @@ describe('EditCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditCardComponent ]
+      declarations: [ EditCardComponent ],
+      imports: [ FormsModule, RouterTestingModule ],
+      providers: [{
+        provide: CandidateService,
+        useClass: MockHeroService
+      }]
     })
     .compileComponents();
   }));
